@@ -1,8 +1,7 @@
-from functions import *
-from dic import *
+import database
+import cli
+import models
 
-
-# na function forca_opcao, colocar para que a funcao depois de pedir o input, considere o value da chave
-mensagem = forca_opcao("Bem vindo ao seu task manager, o que desejar fazer:", opcoes_menu)
-
-acoes(mensagem)
+if __name__ == "main":
+    database.criar_tabela()
+    cli.menu()
