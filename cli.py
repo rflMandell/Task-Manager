@@ -1,4 +1,5 @@
-import models
+from models import *
+
 
 def menu():
     while True:
@@ -11,16 +12,16 @@ def menu():
         
         if opcao == "1":
             descricao = input("Descrição da tarefa: ")
-            models.adicionar_tarefa(descricao)
+            adicionar_tarefa(descricao)
         elif opcao == "2":
-            for tarefa in models.listar_tarefas():
+            for tarefa in listar_tarefas():
                 print(tarefa)
         elif opcao == "3":
             tarefa_id = int(input("ID da tarefa a concluir: "))
-            models.concluir_tarefa(tarefa_id)
+            concluir_tarefa(tarefa_id)
         elif opcao == "4":
             tarefa_id = int(input("ID da tarefa a remover: "))
-            models.remover_tarefa(tarefa_id)
+            remover_tarefa(tarefa_id)
         elif opcao == "5":
             break
         else:
