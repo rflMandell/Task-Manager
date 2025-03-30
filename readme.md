@@ -17,7 +17,6 @@ gerenciador_tarefas/
 │── database.py           # Conexão com o banco de dados
 │── models.py             # Operações no banco (CRUD)
 │── cli.py                # Interface de linha de comando
-│── requirements.txt      # Dependências (caso necessário)
 ```
 
 ## Como Rodar o Projeto
