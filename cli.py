@@ -1,25 +1,29 @@
 import database
 import cli
+import models
 
-def main():
+def menu():
     while True:
-        print("\n1. Adicionar Tarefa\n2. Listar Tarefas\n3. Concluir tarefa\n4. Remover Tarefa\n5. Sair")
-        opcao = input("Escolha uma opcao\n->")
+        print("\n1. Adicionar Tarefa")
+        print("2. Listar Tarefas")
+        print("3. Concluir Tarefa")
+        print("4. Remover Tarefa")
+        print("5. Sair")
+        opcao = input("Escolha uma opção: ")
         
         if opcao == "1":
-            descricao = input("Descricao da tarefa")
-            adicionar_tarefa(descricao)
+            descricao = input("Descrição da tarefa: ")
+            models.adicionar_tarefa(descricao)
         elif opcao == "2":
-            for tarefa in listar_tarefas():
+            for tarefa in models.listar_tarefas():
                 print(tarefa)
         elif opcao == "3":
             tarefa_id = int(input("ID da tarefa a concluir: "))
-            concluir_tarefa(tarefa_id)
+            models.concluir_tarefa(tarefa_id)
         elif opcao == "4":
             tarefa_id = int(input("ID da tarefa a remover: "))
-            remover_tarefa(tarefa_id)
+            models.remover_tarefa(tarefa_id)
         elif opcao == "5":
             break
         else:
-            print("Opcao invalida!")
-        
+            print("Opção inválida!")
