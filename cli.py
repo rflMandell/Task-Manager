@@ -1,5 +1,3 @@
-import database
-import cli
 import models
 
 def menu():

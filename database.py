@@ -1,5 +1,3 @@
-import models
-import cli
 import sqlite3
 
 def conectar():
